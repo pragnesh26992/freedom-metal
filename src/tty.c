@@ -32,9 +32,9 @@ int metal_tty_getc(int *c) {
 #define __METAL_DT_STDOUT_UART_BAUD 115200
 #endif
 
-METAL_CONSTRUCTOR(metal_tty_init) {
-    metal_uart_init(__METAL_DT_STDOUT_UART_HANDLE, __METAL_DT_STDOUT_UART_BAUD);
-}
+//METAL_CONSTRUCTOR(metal_tty_init) {
+//    metal_uart_init(__METAL_DT_STDOUT_UART_HANDLE, __METAL_DT_STDOUT_UART_BAUD);
+//}
 #else
 /* This implementation of putc doesn't actually do anything, it's just there to
  * provide a shim that eats all the characters so we can ensure that everything
