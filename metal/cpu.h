@@ -304,4 +304,6 @@ metal_cpu_get_buserror(struct metal_cpu *cpu) {
     return cpu->vtable->get_buserror(cpu);
 }
 
+#define metal_cpu_yield()
+
 #endif

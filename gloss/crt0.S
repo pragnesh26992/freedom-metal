@@ -57,6 +57,7 @@ _start:
    * is optional: if the METAL provides an environment in which this relocation
    * is not necessary then it must simply set metal_segment_data_source_start to
    * be equal to metal_segment_data_target_start. */
+
   la t0, metal_segment_data_source_start
   la t1, metal_segment_data_target_start
   la t2, metal_segment_data_target_end
@@ -152,7 +153,6 @@ _skip_init:
 
   /* Synchronize harts so that secondary harts wait until hart 0 finishes
      initializing */
-  call __metal_synchronize_harts
 
   /* Disable and clear all interrupt sources */
   li   a3, -1

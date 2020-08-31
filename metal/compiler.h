@@ -20,4 +20,11 @@
 
 void _metal_trap(int ecode);
 
+#define restrict __restrict__
+#define metal_align(n) __attribute__((aligned(n)))
+#define metal_weak __attribute__((weak))
+
+#define METAL_PACKED_BEGIN
+#define METAL_PACKED_END __attribute__((__packed__))
+
 #endif
